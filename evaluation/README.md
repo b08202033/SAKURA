@@ -82,4 +82,6 @@ python calculate_acc.py -i <model_name>_judgements.json
 
 The final accuracy will be printed.
 
-Please note that if the "Judgement" values not "correct" or "incorrect", the script will print the corresponding audio file name, and manual check will be required to fix it.
+Please note that if the "Judgement" values not "correct" or "incorrect", the script will print the corresponding audio file name, and manual check will be required to fix it. 
+
+If you encounter this problem, the final accuracy should be computed again by running ``calculate_acc.py`` after you fix the judgements.
