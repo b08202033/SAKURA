@@ -2,7 +2,7 @@
 Here is the code for our LLM-based evaluation.
 
 ## Usage
-``llm_judge.py`` contains the evaluation pipeline, and ``calculate_acc.py`` contains the script to compute the accuracy based on the judgement. Here, we briefly describe how to use it.
+``llm_judge.py`` contains the evaluation pipeline, and ``calculate_acc.py`` contains the script to compute the accuracy based on the judgement. Here, we briefly describe how to use them.
 
 ### Step 0: Setup
 Make sure you have installed the following packages:
@@ -10,7 +10,7 @@ Make sure you have installed the following packages:
 pip install tqdm==4.66.4
 pip install openai==1.33.0
 ```
-In addition, please fill in your OpenAI API key in the line 85:
+In addition, please fill in your OpenAI API key in the line 85 of ``llm_judge.py``:
 ```
 openai_api_key = "<your_openai_api_key>"
 ```
