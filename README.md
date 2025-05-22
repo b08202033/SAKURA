@@ -65,14 +65,12 @@ Here is the leaderboard of SAKURA, which currently only contain the baseline LAL
 | Model                  | Size |  Gender  |        | Language |        | Emotion  |        | Animal   |        | Average  |        |
 |:----------------------:|:----:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|
 |                        |      | Single   | Multi  | Single   | Multi  | Single   | Multi  | Single   | Multi  | Single   | Multi  |
-| **Open-source LALMs**  |      |          |        |          |        |          |        |          |        |          |        |
 | LTU-AS                 |  7B   |  52.4    | 19.6   |  16.8    | 11.4   |  28.6    | 19.6   |  65.6    | 21.8   |  40.9    | 18.1   |
 | GAMA-IT                |  7B   |  76.4    | 39.8   |   5.6    | 19.4   |   5.6    | 24.2   |  85.2    | 51.4   |  43.2    | 33.7   |
 | SALMONN                | 7.5B  |  59.8    | 48.6   |  21.8    | 29.6   |  19.8   | 28.2   |  68.6    | 34.6   |  42.5    | 35.3   |
 | DeSTA2                 | 8.3B  | **88.4** |**85.2**|  94.2    | 75.4   |  34.8   | 36.4   |  34.4    | 31.2   |  63.0    |**57.1**|
 | Qwen-Audio-Chat        | 8.4B  |  49.6    | 43.8   |  87.6    | 40.6   |  63.2    | 37.0   |**92.2**  |**66.0**|  73.2    | 46.9   |
 | Qwen2-Audio-Instruct   | 8.4B  |  88.0    | 47.2   |  83.8    | 48.0   |**64.2**  |**39.8**|  88.8    | 61.4   |**81.2**  | 49.1   |
-| **Proprietary LALMs**  |      |          |        |          |        |          |        |          |        |          |        |
 | GPT-4o Audio           |  -   |    -     |   -    |  95.2    | 83.6   |  38.2    | 23.8   |  80.6    | 55.4   |  71.3    | 54.3   |
 | Gemini-1.5-flash       |  -   |  77.0    | 24.2   |**98.2**  | 79.8   |  24.6    | 19.4   |  27.2    | 16.2   |  56.8    | 34.9   |
 | Gemini-1.5-pro         |  -   |  74.0    | 43.4   |  97.2    |**90.6**|  39.2    | 24.0   |  42.0    | 28.6   |  63.1    | 46.6   |
@@ -87,7 +85,7 @@ Here is the leaderboard of SAKURA, which currently only contain the baseline LAL
 
 ## Citation
 
-If you find SAKURA helpful for your research, please consider to cite our paper
+If you find SAKURA helpful for your research, please consider to cite our paper.
 
 ```bibtex
 @article{yang2025sakuramultihopreasoninglarge,
