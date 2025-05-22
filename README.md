@@ -25,8 +25,9 @@ Large audio-language models (LALMs) extend the large language models with multim
 - We find that they can reason well in the textual modality, indicating that the above failures are not due to a lack of knowledge, but rather insufficient integration of multimodal information. 
 
 ## News
-- [2025.05.19] Our paper is accepted to Interspeech 2025! See you in Rotterdam!
+
 - [2025.05.22] Our paper is now available on [arXiv](https://arxiv.org/abs/2505.13237)
+- [2025.05.19] Our paper is accepted to Interspeech 2025! See you in Rotterdam!
 
 ## Baselines
 Here are the baseline models we included in the paper. The implementations were based on the official ones.
