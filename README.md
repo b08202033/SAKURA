@@ -19,40 +19,14 @@
 
 Large audio-language models (LALMs) extend the large language models with multimodal understanding in speech, audio, etc. While their performances on speech and audio-processing tasks are extensively studied, their reasoning abilities remain underexplored. Particularly, their multi-hop reasoning, the ability to recall and integrate multiple facts, lacks systematic evaluation. Existing benchmarks focus on general speech and audio-processing tasks, conversational abilities, and fairness but overlook this aspect. To bridge this gap, we introduce SAKURA, a benchmark assessing LALMs’ multi-hop reasoning based on speech and audio information. Results show that LALMs struggle to integrate speech/audio representations for multi-hop reasoning, even when they extract the relevant information correctly, highlighting a fundamental challenge in multimodal reasoning. Our findings expose a critical limitation in LALMs, offering insights and resources for future research.
 
+**🌟 Key findings**
+- LALMs exhibit blind spots for certain speech/audio attributes, failing to recognize them accurately.
+- LALMs are unable to perform multi-hop reasoning based on attribute information they have correctly extracted from audio.
+- We find that they can reason well in the textual modality, indicating that the above failures are not due to a lack of knowledge, but rather insufficient integration of multimodal information. 
+
 ## News
 - [2025.05.19] Our paper is accepted to Interspeech 2025! See you in Rotterdam!
 - [2025.05.22] Our paper is now available on [arXiv](https://arxiv.org/abs/2505.13237)
-
-## Data Examples
-Here we provide some examples from SAKURA, with the choices omitted for brevity. The entire dataset can be obtained in ``data/``.
-* Gender
-
-|sub-track|instruction|
-|------|-----|
-|single-hop|Please identify the gender of the speaker.|
-|multi-hop|Who among the options do you think has the same gender as the speaker in the audio?|
-
-* Language
-
-
-|sub-track|instruction|
-|------|-----|
-|single-hop|Listen to the speech segment, and choose the language spoken by the speaker. |
-|multi-hop|From the listed countries, which one has the audio's spoken language as an official language? |
-
-* Emotion
-
-|sub-track|instruction|
-|------|-----|
-|single-hop|What emotion is the speaker expressing in the audio?|
-|multi-hop|Which sentence best matches the emotional state of others with the same emotion expressed in the audio?|
-
-* Animal
-
-|sub-track|instruction|
-|------|-----|
-|single-hop|Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options. |
-|multi-hop|What physical feature does the animal in the provided audio segment have?|
 
 ## Baselines
 Here are the baseline models we included in the paper. The implementations were based on the official ones.
@@ -83,4 +57,46 @@ Here are the baseline models we included in the paper. The implementations were 
 
 
 ## Evaluation
-We adopted LLM-as-a-judge approach for automatic evaluation in SAKURA. Please refer to ``evaluation/`` for more details.
+SAKURA uses the LLM-as-a-judge approach for automatic evaluation. We provide the evaluation code, models, and prompts in the ``evaluation/`` directory. For more details on how to evaluate your models with SAKURA, please refer to this directory.
+
+## Leaderboard
+Here is the leaderboard of SAKURA, which currently only contain the baseline LALMs in the paper. 
+
+| Model                  | Size |  Gender  |        | Language |        | Emotion  |        | Animal   |        | Average  |        |
+|:----------------------:|:----:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|:--------:|:------:|
+|                        |      | Single   | Multi  | Single   | Multi  | Single   | Multi  | Single   | Multi  | Single   | Multi  |
+| **Open-source LALMs**  |      |          |        |          |        |          |        |          |        |          |        |
+| LTU-AS                 |  7B   |  52.4    | 19.6   |  16.8    | 11.4   |  28.6    | 19.6   |  65.6    | 21.8   |  40.9    | 18.1   |
+| GAMA-IT                |  7B   |  76.4    | 39.8   |   5.6    | 19.4   |   5.6    | 24.2   |  85.2    | 51.4   |  43.2    | 33.7   |
+| SALMONN                | 7.5B  |  59.8    | 48.6   |  21.8    | 29.6   |  19.8   | 28.2   |  68.6    | 34.6   |  42.5    | 35.3   |
+| DeSTA2                 | 8.3B  | **88.4** |**85.2**|  94.2    | 75.4   |  34.8   | 36.4   |  34.4    | 31.2   |  63.0    |**57.1**|
+| Qwen-Audio-Chat        | 8.4B  |  49.6    | 43.8   |  87.6    | 40.6   |  63.2    | 37.0   |**92.2**  |**66.0**|  73.2    | 46.9   |
+| Qwen2-Audio-Instruct   | 8.4B  |  88.0    | 47.2   |  83.8    | 48.0   |**64.2**  |**39.8**|  88.8    | 61.4   |**81.2**  | 49.1   |
+| **Proprietary LALMs**  |      |          |        |          |        |          |        |          |        |          |        |
+| GPT-4o Audio           |  -   |    -     |   -    |  95.2    | 83.6   |  38.2    | 23.8   |  80.6    | 55.4   |  71.3    | 54.3   |
+| Gemini-1.5-flash       |  -   |  77.0    | 24.2   |**98.2**  | 79.8   |  24.6    | 19.4   |  27.2    | 16.2   |  56.8    | 34.9   |
+| Gemini-1.5-pro         |  -   |  74.0    | 43.4   |  97.2    |**90.6**|  39.2    | 24.0   |  42.0    | 28.6   |  63.1    | 46.6   |
+
+## How to Participate
+
+**We sincerely invite you to participate in SAKURA!** Here are the steps on how to join this:
+- Download the data in ``data/`` and generate predictions with your models. It is recommended to save the predictions in the format specified in ``evaluation/`` so that the evaluation code can be used directly without significant modifications.
+- Obtain the scores for your models using the evaluation code in ``evaluation/``. We highly recommend using the LLM evaluator and the prompts provided in ``evaluation/`` to ensure consistency in evaluation.
+- You can open an issue and report your model’s scores. We prefer that you also provide either the model checkpoints (along with instructions on how to use them) or the prediction files to help us verify the reported scores.
+
+
+## Citation
+
+If you find SAKURA helpful for your research, please consider to cite our paper
+
+```bibtex
+@article{yang2025sakuramultihopreasoninglarge,
+      title={SAKURA: On the Multi-hop Reasoning of Large Audio-Language Models Based on Speech and Audio Information}, 
+      author={Chih-Kai Yang and Neo Ho and Yen-Ting Piao and Hung-yi Lee},
+      year={2025},
+      eprint={2505.13237},
+      archivePrefix={arXiv},
+      primaryClass={eess.AS},
+      url={https://arxiv.org/abs/2505.13237}, 
+}
+```

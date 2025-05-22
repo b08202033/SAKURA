@@ -2,6 +2,52 @@
 
 Here contains the dataset of all the four tracks of SAKURA.
 
+## Data Examples
+Here we provide some examples from SAKURA, with the choices omitted for brevity.
+
+<details>
+<summary>Gender track</summary>
+
+|sub-track|instruction|
+|------|-----|
+|single-hop|Please identify the gender of the speaker.|
+|multi-hop|Who among the options do you think has the same gender as the speaker in the audio?|
+
+</details>
+
+
+<details>
+<summary>Language track</summary>
+
+
+|sub-track|instruction|
+|------|-----|
+|single-hop|Listen to the speech segment, and choose the language spoken by the speaker. |
+|multi-hop|From the listed countries, which one has the audio's spoken language as an official language? |
+
+</details>
+
+
+<details>
+<summary>Emotion track</summary>
+
+|sub-track|instruction|
+|------|-----|
+|single-hop|What emotion is the speaker expressing in the audio?|
+|multi-hop|Which sentence best matches the emotional state of others with the same emotion expressed in the audio?|
+
+</details>
+
+<details>
+<summary>Animal track</summary>
+
+|sub-track|instruction|
+|------|-----|
+|single-hop|Identify the animal most likely responsible for the sound in this audio clip and choose the most likely one from the options. |
+|multi-hop|What physical feature does the animal in the provided audio segment have?|
+
+</details>
+
 ## Structure
 ### Tracks
 SAKURA consists of four tracks: Gender, Language, Emotion, and Animal. The corresponding data are stored in ``Gender/``, ``Language/``, ``Emotion/``, and ``Animal/``, respectively.

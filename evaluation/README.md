@@ -1,5 +1,5 @@
 # Evaluation
-Here is the code for our LLM-based evaluation.
+Here is the code for our LLM-based evaluation. We currently employ ``gpt-4o-2024-11-20`` as the evaluator, with the prompts in ``llm_judge.py`` used.
 
 ## Usage
 ``llm_judge.py`` contains the evaluation pipeline, and ``calculate_acc.py`` contains the script to compute the accuracy based on the judgement. Here, we briefly describe how to use them.
