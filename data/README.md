@@ -1,6 +1,6 @@
 # Dataset
 
-Here contains the dataset of all the four tracks of SAKURA.
+Here contains the dataset of all the four tracks of SAKURA. You can also find our dataset on [HuggingFace](https://huggingface.co/SLLM-multi-hop).
 
 ## Data Examples
 Here we provide some examples from SAKURA, with the choices omitted for brevity.
