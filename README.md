@@ -26,6 +26,7 @@ Large audio-language models (LALMs) extend the large language models with multim
 
 ## News
 
+- [2025.06.09] Our dataset is released on HuggingFace! You can now access the datasets of the four tracks at [HuggingFace](https://huggingface.co/SLLM-multi-hop).
 - [2025.05.22] Our paper is now available on [arXiv](https://arxiv.org/abs/2505.13237)
 - [2025.05.19] Our paper is accepted to Interspeech 2025! See you in Rotterdam!
 
